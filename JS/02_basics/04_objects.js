@@ -59,3 +59,39 @@ console.log(Object.entries(tinderUser));
 
 console.log(tinderUser.hasOwnProperty("isLoggedIn"));
 console.log(tinderUser.hasOwnProperty("isLogged"));
+
+// ++++++++++++++++++++++++++++++++++++
+// de-structuring
+
+const course = {
+    coursename: 'JS',
+    price: 22,
+    courseinstructor: "Aamir"
+}
+
+// course.courseinstructor
+
+// const {courseinstructor} = course
+// console.log(courseinstructor);
+
+const {courseinstructor: instructor} = course
+console.log(instructor);
+
+// in react
+
+// const navbar = ({company}) => {
+
+// }
+
+// navbar(company = "microsoft")
+
+
+// Json
+
+{
+    "name":"aamir",
+    "age":20,
+    "isLoggedIn": false
+}
+
+// random user generator, json formatter, ap
