@@ -8,6 +8,9 @@ let dc_heros = ['superman', 'batman', 'flash']
 let allHeros = marvel_heros.concat(dc_heros)
 console.log(allHeros);
 
+let allotherHeros = [...marvel_heros, ...dc_heros]
+console.log(allotherHeros);
+
 const anotherArray = [1, 2, 3, [4, 5], 6, [7, 8, [9, 1]]]
 const flatArray = anotherArray.flat(Infinity)
 // console.log(flatArray);
