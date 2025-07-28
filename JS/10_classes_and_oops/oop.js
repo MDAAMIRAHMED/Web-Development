@@ -1,43 +1,40 @@
-const user = {
-  username: "hitesh",
-  loginCount: 8,
-  signedIn: true,
+// Object Literal
 
-  getUserDetails: function () {
-    // console.log("Got user details from database");
-    // console.log(`username: ${this.username}`);
-    console.log(this);
+const user = {
+  username: "Hitesh",
+  isLoggedIn: true,
+
+  getUserName: function () {
+    // console.log(`Username is ${username}`);
+    // console.log(`Username is ${this.username}`);
+    // console.log(this);
   },
 };
 
 // console.log(user.username);
-// user.getUserDetails();
-
+// user.getUserName();
 // console.log(this);
 
-// const promiseOne = new Promise()
-// const date = new Date()
+// constructor function
 
 function User(username, loginCount, isLoggedIn) {
-  this.username = username;
-  this.loginCount = loginCount;
-  this.isLoggedIn = isLoggedIn;
+  (this.username = username),
+    (this.loginCount = loginCount),
+    (this.isLoggedIn = isLoggedIn),
+    (this.greeting = function () {
+      console.log(`Hello, ${this.username}`);
+    });
 
-  this.greeting = function () {
-    console.log(`Welcome, ${this.username}`);
-  };
-  return this;
+  // return this; // implicit
 }
 
-const userOne = new User("hitesh", 12, true);
-const userTwo = new User("John", 23, false);
-console.log(userOne);
-console.log(userTwo);
+// const userOne = User("Hitesh", 12, true);
+// const userTwo = User("John", 11, false);
+// console.log(userOne); // userTwo values
+
+const userOne = new User("Hitesh", 12, true);
+const userTwo = new User("John", 11, false);
+// console.log(userOne);
+// console.log(userTwo);
 console.log(userOne.constructor);
-console.log(userTwo.constructor);
-
-console.log(userOne instanceof User);
-console.log(userTwo instanceof User);
-console.log(userOne instanceof Object);
-
-
+console.log(userTwo instanceof User)
