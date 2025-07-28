@@ -1,67 +1,63 @@
-// let myName = "hitesh     "
-// let mychannel = "chai     "
+// let myName = "Aamir";
+// let myChannel = "Chai";
 
-// console.log(myName.trueLength);
+// console.log(myName.trueLength());
 
+const myHeros = ["thor", "hulk"];
 
-let myHeros = ["thor", "spiderman"]
+const heroPower = {
+  thor: "hammer",
+  hulk: "smash",
 
+  getHulkPower: function () {
+    console.log(`Hero power is ${this.hulk}`);
+  },
+};
 
-let heroPower = {
-    thor: "hammer",
-    spiderman: "sling",
+Object.prototype.hitesh = function () {
+  console.log(`Hitesh is present in all objects`);
+};
 
-    getSpiderPower: function(){
-        console.log(`Spidy power is ${this.spiderman}`);
-    }
-}
+// myHeros.hitesh();
+// heroPower.hitesh();
 
-Object.prototype.hitesh = function(){
-    console.log(`hitesh is present in all objects`);
-}
+Array.prototype.heyHitesh = function () {
+  console.log("Hey Hitesh");
+};
 
-Array.prototype.heyHitesh = function(){
-    console.log(`Hitesh says hello`);
-}
-
-// heroPower.hitesh()
-// myHeros.hitesh()
-// myHeros.heyHitesh()
-// heroPower.heyHitesh()
+myHeros.heyHitesh();
+// heroPower.heyHitesh();
 
 // inheritance
 
 const User = {
-    name: "chai",
-    email: "chai@google.com"
-}
-
+  name: "chai",
+  email: "chai@gmail.com",
+};
 const Teacher = {
-    makeVideo: true
-}
+  makeVideo: true,
+};
 
 const TeachingSupport = {
-    isAvailable: false
-}
+  isAvailable: false,
+};
 
 const TASupport = {
-    makeAssignment: 'JS assignment',
-    fullTime: true,
-    __proto__: TeachingSupport
-}
+  makeAssignment: "JS assignments",
+  fullTime: true,
+  //   __proto__: TeachingSupport,
+};
 
-Teacher.__proto__ = User
+Teacher.__proto__ = User;
 
-// modern syntax
-Object.setPrototypeOf(TeachingSupport, Teacher)
+Object.setPrototypeOf(TeachingSupport, TASupport);
 
-let anotherUsername = "ChaiAurCode     "
+String.prototype.trueLength = function () {
+  console.log(`${this}`);
+  console.log(`True length is: ${this.trim().length}`);
+};
 
-String.prototype.trueLength = function(){
-    console.log(`${this}`);
-    console.log(`True length is: ${this.trim().length}`);
-}
+let anotherUserName = "ChaiAurCode    ";
+anotherUserName.trueLength();
 
-anotherUsername.trueLength()
-"hitesh".trueLength()
-"iceTea".trueLength()
+"Hitesh   ".trueLength()

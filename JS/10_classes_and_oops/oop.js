@@ -18,12 +18,12 @@ const user = {
 // constructor function
 
 function User(username, loginCount, isLoggedIn) {
-  (this.username = username),
-    (this.loginCount = loginCount),
-    (this.isLoggedIn = isLoggedIn),
-    (this.greeting = function () {
-      console.log(`Hello, ${this.username}`);
-    });
+  this.username = username;
+  this.loginCount = loginCount;
+  this.isLoggedIn = isLoggedIn;
+  this.greeting = function () {
+    console.log(`Hello, ${this.username}`);
+  };
 
   // return this; // implicit
 }
@@ -34,7 +34,7 @@ function User(username, loginCount, isLoggedIn) {
 
 const userOne = new User("Hitesh", 12, true);
 const userTwo = new User("John", 11, false);
-// console.log(userOne);
+console.log(userOne);
 // console.log(userTwo);
 console.log(userOne.constructor);
-console.log(userTwo instanceof User)
+console.log(userTwo instanceof User);
