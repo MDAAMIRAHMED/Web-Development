@@ -10,3 +10,5 @@ website: [unsplash](https://unsplash.com/) | [Image Map](http://www.image-map.ne
 documentation: [mdn](https://developer.mozilla.org/en-US/) | [Ecma](https://tc39.es/ecma262/)
 <br />
 website: [Json Generator](https://randomuser.me/) | [Json Formatter](https://jsonformatter.org/)
+## [TS](https://github.com/MDAAMIRAHMED/Web-Development/tree/main/TS)
+documentation: [tslang](https://www.typescriptlang.org/docs/handbook/2/basic-types.html)
