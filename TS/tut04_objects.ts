@@ -18,4 +18,20 @@ createUser(user2);
 function UserDetails(): { user: string; isLogged: boolean } {
   return { user: "sam", isLogged: false };
 }
+
+// type
+
+type User = {
+  name: string;
+  age: number;
+  isPaid: boolean;
+};
+
+function UserFunction(user: User): User {
+  return { name: "aamir", age: 20, isPaid: true };
+}
+
+UserFunction({ name: "aamir", age: 20, isPaid: true });
+
+type mybool = boolean;
 export {};

@@ -17,3 +17,7 @@ createUser(user2);
 function UserDetails() {
     return { user: "sam", isLogged: false };
 }
+function UserFunction(user) {
+    return { name: "aamir", age: 20, isPaid: true };
+}
+UserFunction({ name: "aamir", age: 20, isPaid: true });
